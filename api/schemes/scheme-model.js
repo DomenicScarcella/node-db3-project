@@ -128,4 +128,4 @@ module.exports = {
   findSteps,
   add,
   addStep,
-}
+};

@@ -10,14 +10,19 @@ on p.categoryid = c.id
 
 -- Display the order Id and shipper CompanyName for all orders placed before August 9 2012. Shows 429 records.
 
-I have no idea how to cut off the results by date
-
-select od.orderid, s.companyname, o.orderdate
-from [Order] as o
-left join shipper as s
+select o.id, s.companyname
+from [order] as o
+join shipper as s
 on o.shipvia = s.id
-left join orderdetail as od
-on o.id = od.orderid
+where o.orderdate < '2012-08-09'
+
+-- select od.orderid, s.companyname, o.orderdate
+-- from [order] as o
+-- left join shipper as s
+-- on o.shipvia = s.id
+-- left join orderdetail as od
+-- on o.id = od.orderid
+-- where o.orderdate < '2012-08-09'
 
 
 -- Display the name and quantity of the products ordered in order with Id 10251. Sort by ProductName. Shows 3 records.

@@ -7,10 +7,10 @@ const schemes = [
   { scheme_name: 'Find the Holy Grail' },
   { scheme_name: 'Steal Coworker\'s Identity' },
   { scheme_name: 'Have fun!' },
-]
+];
 
-exports.schemes = schemes
+exports.schemes = schemes;
 
 exports.seed = function (knex) {
-  return knex('schemes').insert(schemes)
-}
+  return knex('schemes').insert(schemes);
+};
